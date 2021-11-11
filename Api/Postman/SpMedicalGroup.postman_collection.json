@@ -1,0 +1,692 @@
+{
+	"info": {
+		"_postman_id": "edcfebb7-f4c2-41f4-a35a-58a5bb10a506",
+		"name": "SpMedicalGroup",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"administrador@admin.com\",\r\n    \"senha\" : \"###\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://spmedicalgroupgustavomiguel.azurewebsites.net/api/login",
+							"protocol": "http",
+							"host": [
+								"spmedicalgroupgustavomiguel",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario.ListarTodos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluaXN0cmFkb3JAYWRtaW4uY29tIiwianRpIjoiMTEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIzIiwiZXhwIjoxNjMzMDM1MTU3LCJpc3MiOiJTcE1lZGljYWxHcm91cCIsImF1ZCI6IlNwTWVkaWNhbEdyb3VwIn0.MNkBPyu4flwsMRNdGGHD2F1xNu4HqFQoi1T4lwnycyY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "spmedicalgroupgustavomiguel.azurewebsites.net/api/usuario/ListarTodos",
+							"host": [
+								"spmedicalgroupgustavomiguel",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"usuario",
+								"ListarTodos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TipoUsuario",
+			"item": [
+				{
+					"name": "TipoUsuario.ListarTodos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluaXN0cmFkb3JAYWRtaW4uY29tIiwianRpIjoiMTEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIzIiwiZXhwIjoxNjMyODYwMzkwLCJpc3MiOiJTcE1lZGljYWxHcm91cCIsImF1ZCI6IlNwTWVkaWNhbEdyb3VwIn0.sIT_Fkb8HLCsVggytM4WUsU6d0IS1EPnCTRYtadNdqo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "spmedicalgroupgustavomiguel.azurewebsites.net/api/tipousuario/ListarTodos",
+							"host": [
+								"spmedicalgroupgustavomiguel",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"tipousuario",
+								"ListarTodos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TipoUsuario.Cadastrar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluaXN0cmFkb3JAYWRtaW4uY29tIiwianRpIjoiMTEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIzIiwiZXhwIjoxNjMyODYwMzkwLCJpc3MiOiJTcE1lZGljYWxHcm91cCIsImF1ZCI6IlNwTWVkaWNhbEdyb3VwIn0.sIT_Fkb8HLCsVggytM4WUsU6d0IS1EPnCTRYtadNdqo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"NomeTipoUsuario\" : \"Usuario teste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "spmedicalgroupgustavomiguel.azurewebsites.net/api/tipousuario/cadastrar",
+							"host": [
+								"spmedicalgroupgustavomiguel",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"tipousuario",
+								"cadastrar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TipoMedico",
+			"item": [
+				{
+					"name": "TipoMedico.ListarTodos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluaXN0cmFkb3JAYWRtaW4uY29tIiwianRpIjoiMTEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIzIiwiZXhwIjoxNjMyODYwOTE0LCJpc3MiOiJTcE1lZGljYWxHcm91cCIsImF1ZCI6IlNwTWVkaWNhbEdyb3VwIn0.DcLBDCBA4kWPS0dQPW5daUWLkjK0k03E24myTfacvOo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "spmedicalgroupgustavomiguel.azurewebsites.net/api/tipomedico/ListarTodos",
+							"host": [
+								"spmedicalgroupgustavomiguel",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"tipomedico",
+								"ListarTodos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Paciente",
+			"item": [
+				{
+					"name": "Paciente.ListarTodos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluaXN0cmFkb3JAYWRtaW4uY29tIiwianRpIjoiMTEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIzIiwiZXhwIjoxNjMyODYwOTE0LCJpc3MiOiJTcE1lZGljYWxHcm91cCIsImF1ZCI6IlNwTWVkaWNhbEdyb3VwIn0.DcLBDCBA4kWPS0dQPW5daUWLkjK0k03E24myTfacvOo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "spmedicalgroupgustavomiguel.azurewebsites.net/api/paciente/ListarTodos",
+							"host": [
+								"spmedicalgroupgustavomiguel",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"paciente",
+								"ListarTodos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Medico",
+			"item": [
+				{
+					"name": "Medico.ListarTodos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluaXN0cmFkb3JAYWRtaW4uY29tIiwianRpIjoiMTEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIzIiwiZXhwIjoxNjMyODYwOTE0LCJpc3MiOiJTcE1lZGljYWxHcm91cCIsImF1ZCI6IlNwTWVkaWNhbEdyb3VwIn0.DcLBDCBA4kWPS0dQPW5daUWLkjK0k03E24myTfacvOo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "spmedicalgroupgustavomiguel.azurewebsites.net/api/medico/ListarTodos",
+							"host": [
+								"spmedicalgroupgustavomiguel",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"medico",
+								"ListarTodos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Empresa",
+			"item": [
+				{
+					"name": "Empresa.ListarTodos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluaXN0cmFkb3JAYWRtaW4uY29tIiwianRpIjoiMTEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIzIiwiZXhwIjoxNjMyODYwOTE0LCJpc3MiOiJTcE1lZGljYWxHcm91cCIsImF1ZCI6IlNwTWVkaWNhbEdyb3VwIn0.DcLBDCBA4kWPS0dQPW5daUWLkjK0k03E24myTfacvOo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "spmedicalgroupgustavomiguel.azurewebsites.net/api/empresa/ListarTodos",
+							"host": [
+								"spmedicalgroupgustavomiguel",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"empresa",
+								"ListarTodos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Empresa.Cadastrar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluaXN0cmFkb3JAYWRtaW4uY29tIiwianRpIjoiMTEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIzIiwiZXhwIjoxNjMyODYxNjY5LCJpc3MiOiJTcE1lZGljYWxHcm91cCIsImF1ZCI6IlNwTWVkaWNhbEdyb3VwIn0.vQxnfxK0nBd2YdkGNip0ByAgIY5S0I5wY05KumJsW7s",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Cnpj\" : \"112233445566778\",\r\n    \"NomeFantasia\" : \"Empresa Teste\",\r\n    \"Endereco\" : \"somewhere over the rainbow\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "spmedicalgroupgustavomiguel.azurewebsites.net/api/empresa/cadastrar",
+							"host": [
+								"spmedicalgroupgustavomiguel",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"empresa",
+								"cadastrar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Consulta",
+			"item": [
+				{
+					"name": "Consulta.ListarTodos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluaXN0cmFkb3JAYWRtaW4uY29tIiwianRpIjoiMTEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIzIiwiZXhwIjoxNjMyODY2OTIxLCJpc3MiOiJTcE1lZGljYWxHcm91cCIsImF1ZCI6IlNwTWVkaWNhbEdyb3VwIn0.RwoEduuvZaB6kBU28xIFGJNFQGApo36GsE-DIO8BcaM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "spmedicalgroupgustavomiguel.azurewebsites.net/api/consultum/ListarTodos",
+							"host": [
+								"spmedicalgroupgustavomiguel",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"consultum",
+								"ListarTodos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta.ListarTodasDoPaciente",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxpZ2lhQGdtYWlsLmNvbSIsImp0aSI6IjQiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjMyODY1NTg3LCJpc3MiOiJTcE1lZGljYWxHcm91cCIsImF1ZCI6IlNwTWVkaWNhbEdyb3VwIn0.rOpo2vum5AvE2CJ9u7ezVglol6S5Jk1392FXULwjacU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "spmedicalgroupgustavomiguel.azurewebsites.net/api/consultum/todosPaciente",
+							"host": [
+								"spmedicalgroupgustavomiguel",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"consultum",
+								"todosPaciente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta.ListarTodasDoMedico",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2FyZG8ubGVtb3NAc3BtZWRpY2FsZ3JvdXAuY29tLmJyIiwianRpIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjIiLCJleHAiOjE2MzI4NjU2ODQsImlzcyI6IlNwTWVkaWNhbEdyb3VwIiwiYXVkIjoiU3BNZWRpY2FsR3JvdXAifQ.pw1A3AcWpu9nFOu0c-t1UZuaYvrVpbtHA-Zzql15spo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "spmedicalgroupgustavomiguel.azurewebsites.net/api/consultum/todosMedico",
+							"host": [
+								"spmedicalgroupgustavomiguel",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"consultum",
+								"todosMedico"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta.IncluirDescricao",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2FyZG8ubGVtb3NAc3BtZWRpY2FsZ3JvdXAuY29tLmJyIiwianRpIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjIiLCJleHAiOjE2MzI4NjU5NjQsImlzcyI6IlNwTWVkaWNhbEdyb3VwIiwiYXVkIjoiU3BNZWRpY2FsR3JvdXAifQ.EPl5ccywMwu4Ry6uladWsYxXoIZ3bdSmcG0TQMMngbk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "spmedicalgroupgustavomiguel.azurewebsites.net/api/consultum/incluir/2/descricao novo",
+							"host": [
+								"spmedicalgroupgustavomiguel",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"consultum",
+								"incluir",
+								"2",
+								"descricao novo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta.Deletar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluaXN0cmFkb3JAYWRtaW4uY29tIiwianRpIjoiMTEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIzIiwiZXhwIjoxNjMyODY2OTIxLCJpc3MiOiJTcE1lZGljYWxHcm91cCIsImF1ZCI6IlNwTWVkaWNhbEdyb3VwIn0.RwoEduuvZaB6kBU28xIFGJNFQGApo36GsE-DIO8BcaM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "spmedicalgroupgustavomiguel.azurewebsites.net/api/consultum/deletar/1",
+							"host": [
+								"spmedicalgroupgustavomiguel",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"consultum",
+								"deletar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta.Cancelar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluaXN0cmFkb3JAYWRtaW4uY29tIiwianRpIjoiMTEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIzIiwiZXhwIjoxNjMyODY2OTIxLCJpc3MiOiJTcE1lZGljYWxHcm91cCIsImF1ZCI6IlNwTWVkaWNhbEdyb3VwIn0.RwoEduuvZaB6kBU28xIFGJNFQGApo36GsE-DIO8BcaM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "spmedicalgroupgustavomiguel.azurewebsites.net/api/consultum/cancelar/6",
+							"host": [
+								"spmedicalgroupgustavomiguel",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"consultum",
+								"cancelar",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta.Cadastrar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluaXN0cmFkb3JAYWRtaW4uY29tIiwianRpIjoiMTEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIzIiwiZXhwIjoxNjMyODY3MzM2LCJpc3MiOiJTcE1lZGljYWxHcm91cCIsImF1ZCI6IlNwTWVkaWNhbEdyb3VwIn0.BGrCYnutZVX--EQwp7o3qbYR953wmhZeaLunUhBPKOs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idMedico\" : 1,\r\n    \"idPaciente\" : 1,\r\n    \"DataConsulta\" : \"2020-09-29\",\r\n    \"Descricao\" : \"Consulta agendada\",\r\n    \"Situacao\" : \"Agendada\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "spmedicalgroupgustavomiguel.azurewebsites.net/api/consultum/cadastrar",
+							"host": [
+								"spmedicalgroupgustavomiguel",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"consultum",
+								"cadastrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta.Atualizar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluaXN0cmFkb3JAYWRtaW4uY29tIiwianRpIjoiMTEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIzIiwiZXhwIjoxNjMyODcwMzI0LCJpc3MiOiJTcE1lZGljYWxHcm91cCIsImF1ZCI6IlNwTWVkaWNhbEdyb3VwIn0.eCmyv5Rf6OnvdIEIGYe3M-ANnkojrKKMF74B5REDyFg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idMedico\" : 2,\r\n    \"idPaciente\" : 2,\r\n    \"DataConsulta\" : \"2020-10-06\",\r\n    \"Descricao\" : \"teste teste\",\r\n    \"Situacao\" : \"agendado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "spmedicalgroupgustavomiguel.azurewebsites.net/api/consultum/atualizar/8",
+							"host": [
+								"spmedicalgroupgustavomiguel",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"consultum",
+								"atualizar",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ImagemEmpresa",
+			"item": [
+				{
+					"name": "ImagemEmpresa.SalvarImagemBD",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluaXN0cmFkb3JAYWRtaW4uY29tIiwianRpIjoiMTEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIzIiwiZXhwIjoxNjMyOTM4NTg2LCJpc3MiOiJTcE1lZGljYWxHcm91cCIsImF1ZCI6IlNwTWVkaWNhbEdyb3VwIn0.FvKO-5VR-vnwV-lvgQIPQHwy5J2G9UxUTeaF8S53kdc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "arquivo",
+									"type": "file",
+									"src": "/C:/Users/gumig/Desktop/hospital.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "spmedicalgroupgustavomiguel.azurewebsites.net/api/imagem/imagem/bd/2",
+							"host": [
+								"spmedicalgroupgustavomiguel",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"imagem",
+								"imagem",
+								"bd",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ImagemEmpresa.ConsultarEmpresaBD",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluaXN0cmFkb3JAYWRtaW4uY29tIiwianRpIjoiMTEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIzIiwiZXhwIjoxNjMyOTQyODMwLCJpc3MiOiJTcE1lZGljYWxHcm91cCIsImF1ZCI6IlNwTWVkaWNhbEdyb3VwIn0.NHqveWCdWuVOqFU6GiNWxpMMnGSBI0SDPE3CcCLPheQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "spmedicalgroupgustavomiguel.azurewebsites.net/api/imagem/imagem/bd/1",
+							"host": [
+								"spmedicalgroupgustavomiguel",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"imagem",
+								"imagem",
+								"bd",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

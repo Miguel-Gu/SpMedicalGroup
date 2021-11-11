@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <header>
+        <iframe src="header.html" style="height: 100%; width: 100%;" frameborder="0"></iframe>
+    </header>
+
+    <main class="tela_cadastro">
+        <div class="main_cadastro">
+            <h1>Cadastrar consulta</h1>
+
+            <form class="form_cadastro">
+
+                <select id="medicos" >
+                    <option value="médico1">médico1</option>
+                    <option value="médico2">médico2</option>
+                    <option value="" disabled selected>Médico</option>
+                </select>
+
+                <select id="paciente">
+                    <option value="paciente1">paciente1</option>
+                    <option value="paciente2">paciente2</option>
+                    <option value="" disabled selected>Paciente</option>
+                </select>
+
+                <input type="date" placeholder="Data">
+                <button type="submit" class="botao_cadastro">Cadastrar</button>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

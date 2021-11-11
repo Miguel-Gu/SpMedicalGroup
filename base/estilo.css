@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+/* Header */
+
+header{
+    height: 80px;
+    display: flex;
+}
+
+.container_header{
+    width: 83vw;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    height: 70px;
+}
+
+.container_header a{
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: normal;
+    font-size: 30px;
+    text-decoration: none;
+    color: black
+}
+
+.container_header p{
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: normal;
+    font-size: 30px;
+    text-decoration: none;
+    color: black
+}
+
+/* Tela de Login */
+
+.tela_login{
+    height: 753px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#25a3e8+0,253de8+100 */
+    background: rgb(37,163,232); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(37,163,232,1) 0%, rgba(37,61,232,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(37,163,232,1) 0%,rgba(37,61,232,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(37,163,232,1) 0%,rgba(37,61,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25a3e8', endColorstr='#253de8',GradientType=0 ); /* IE6-9 */
+}
+
+.main_login{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 400px;
+    height: 400px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.logo_login{
+    height: 225px;
+}
+
+.form_login{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px;
+    height: 150px;
+}
+
+.form_login input{
+    color: black;
+    padding-left: 10px;
+    height: 25px;
+    border-style: none;
+    border-bottom-style: solid;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.botao_login{
+    height: 35px;
+    margin-top: 20px;
+    border-radius: 4px;
+    border-style: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    background-color: #25A3E8;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+/* Tela de Cadastro */
+
+.tela_cadastro{
+    height: 673px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#25a3e8+0,253de8+100 */
+    background: rgb(37,163,232); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(37,163,232,1) 0%, rgba(37,61,232,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(37,163,232,1) 0%,rgba(37,61,232,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(37,163,232,1) 0%,rgba(37,61,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25a3e8', endColorstr='#253de8',GradientType=0 ); /* IE6-9 */
+}
+
+.main_cadastro{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 325px;
+    height: 400px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.main_cadastro h1{
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: normal;
+    font-size: 30px;
+    text-decoration: none;
+    color: black
+}
+
+.form_cadastro{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+    width: 300px;
+}
+
+.form_cadastro select{
+    height: 45px;
+    background-color: #ECECEC;
+    border-radius: 10px;
+    border: none;
+    color: #8A8A8A;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    padding-left: 10px;
+}
+
+.form_cadastro input{
+    height: 45px;
+    background-color: #ECECEC;
+    border-radius: 10px;
+    border: none;
+    color: #8A8A8A;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    padding-left: 10px;
+}
+
+.form_cadastro button{
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    background-color: #25A3E8;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 25px;
+}
+
+/* Tela de Descrição */
+
+
+.tela_descricao{
+    height: 673px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#25a3e8+0,253de8+100 */
+    background: rgb(37,163,232); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(37,163,232,1) 0%, rgba(37,61,232,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(37,163,232,1) 0%,rgba(37,61,232,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(37,163,232,1) 0%,rgba(37,61,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25a3e8', endColorstr='#253de8',GradientType=0 ); /* IE6-9 */
+}
+
+.main_descricao{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 325px;
+    height: 400px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.main_descricao h1{
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: normal;
+    font-size: 30px;
+    text-decoration: none;
+    color: black
+}
+
+.form_descricao{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+    width: 300px;
+}
+
+.form_descricao select{
+    height: 45px;
+    background-color: #ECECEC;
+    border-radius: 10px;
+    border: none;
+    color: #8A8A8A;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    padding-left: 10px;
+}
+
+.form_descricao input{
+    height: 55px;
+    background-color: #ECECEC;
+    border-radius: 10px;
+    border: none;
+    color: #8A8A8A;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    padding-left: 15px;
+    padding-bottom: 90px;
+}
+
+.form_descricao button{
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    background-color: #25A3E8;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 25px;
+}
+
+/* Tela de Listagem */
+
+.tela_listagem{
+    height: 673px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#25a3e8+0,253de8+100 */
+    background: rgb(37,163,232); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(37,163,232,1) 0%, rgba(37,61,232,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(37,163,232,1) 0%,rgba(37,61,232,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(37,163,232,1) 0%,rgba(37,61,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25a3e8', endColorstr='#253de8',GradientType=0 ); /* IE6-9 */
+}
+
+.main_listagem{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 325px;
+    height: 470px;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 60px;
+    padding-top: 30px;
+}
+
+.main_listagem h1{
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: normal;
+    font-size: 30px;
+    text-decoration: none;
+    color: black
+}
+
+.consulta{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.id_consulta{
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 50px;
+}
+
+.dados_consulta{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: normal;
+    height: 210px;
+}

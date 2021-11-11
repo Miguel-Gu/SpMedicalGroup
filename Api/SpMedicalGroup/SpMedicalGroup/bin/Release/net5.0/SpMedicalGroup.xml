@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SpMedicalGroup</name>
+    </assembly>
+    <members>
+        <member name="M:SpMedicalGroup.Interfaces.IConsultumRepository.Cadastrar(SpMedicalGroup.Domains.Consultum)">
+            <summary>
+            Cria uma nova consulta
+            </summary>
+            <param name="novaConsulta">Objeto com as informações da consulta</param>
+        </member>
+        <member name="M:SpMedicalGroup.Interfaces.IConsultumRepository.Atualizar(System.Byte,SpMedicalGroup.Domains.Consultum)">
+            <summary>
+            Atualiza uma consulta existente
+            </summary>
+            <param name="id">Id da consulta a ser atualizado</param>
+            <param name="consultaAtt">Consulta com as informações atualizadas</param>
+        </member>
+        <member name="M:SpMedicalGroup.Interfaces.IConsultumRepository.Deletar(System.Byte)">
+            <summary>
+            Deleta uma consulta existente
+            </summary>
+            <param name="id">Id da consulta a ser deletada</param>
+        </member>
+        <member name="M:SpMedicalGroup.Interfaces.IConsultumRepository.LerTodasDoMedico(System.Int32)">
+            <summary>
+            Lista todos as consulta que um determinado médico participa
+            </summary>
+            <param name="idMedico">ID do médico que participa das consultas listadas</param>
+            <returns>Uma lista de consultas</returns>
+        </member>
+        <member name="M:SpMedicalGroup.Interfaces.IConsultumRepository.LerTodasDoPaciente(System.Int32)">
+            <summary>
+            Lista todos as consulta que um determinado paciente participa
+            </summary>
+            <param name="idPaciente">ID do paciente que participa das consultas listadas</param>
+            <returns>Uma lista de consultas</returns>
+        </member>
+        <member name="M:SpMedicalGroup.Interfaces.IConsultumRepository.CancelarConsulta(System.Byte)">
+            <summary>
+            Cancela uma consulta
+            </summary>
+            <param name="id">ID da consulta que será cancelada</param>
+        </member>
+        <member name="M:SpMedicalGroup.Interfaces.IConsultumRepository.IncluirDescricao(System.Byte,System.Byte,System.String)">
+            <summary>
+            Inclui descrição em uma consulta
+            </summary>
+            <param name="id">ID da consulta que terá a descrição alterada</param>
+            <param name="descricao">Nova descrição da consulta</param>
+        </member>
+        <member name="M:SpMedicalGroup.Interfaces.IUsuarioRepository.Login(System.String,System.String)">
+            <summary>
+            Valida o usuário
+            </summary>
+            <param name="email">E-mail do usuário</param>
+            <param name="senha">Senha do usuário</param>
+            <returns>Um objeto do tipo Usuario que foi buscado</returns>
+        </member>
+        <member name="T:SpMedicalGroup.ViewModels.LoginViewModel">
+            <summary>
+            Classe responsável pelo modelo de Login
+            </summary>
+        </member>
+    </members>
+</doc>

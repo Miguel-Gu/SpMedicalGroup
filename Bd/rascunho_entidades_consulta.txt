@@ -1,0 +1,40 @@
+empresa
+idEmpresa (PK)
+cnpj
+nomeFantasia
+endereco
+
+usuario
+idUsuario (PK)
+idTipoUsuario (FK)
+nomeUsuario
+email
+senha
+
+tipoUsuario
+idTipoUsuario (PK)
+nomeTipoUsuario
+
+medico
+idMedico (PK)
+idTipoMedico (FK)
+idTipoUsuario (FK)
+
+paciente
+idPaciente (PK)
+RG
+CPF
+endereco
+dataNascimento
+telefone
+
+tipoMedico
+idTipoMedico (PK)
+nomeTipoMedico
+
+consulta
+idConsulta (PK)
+idMedico (FK)
+idPaciente (FK)
+data
+descricao

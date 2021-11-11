@@ -1,0 +1,6 @@
+Grupo de recursos - SpMedicalGroup-resources
+Nome do banco - SP_MG_GUSTAVO_MIGUEL
+Nome do servidor - spmedicalgroupgustavo.database.windows.net
+adm - senai-tarde
+Senha - #SpMedicalGroup
+Server=tcp:spmedicalgroupgustavo.database.windows.net,1433;Initial Catalog=SP_MG_GUSTAVO_MIGUEL;Persist Security Info=False;User ID=senai-tarde;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
