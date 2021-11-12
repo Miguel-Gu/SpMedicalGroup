@@ -73,17 +73,67 @@ namespace SpMedicalGroup.Repositories
             }
         }
 
-        public List<Consultum> LerTodasDoMedico(int idMedico)
+        public List<Consultum> LerTodasDoMedico(int idUsuario)
         {
+            Medico medico = ctx.Medicos.FirstOrDefault(p => p.IdUsuario == idUsuario);
+            short idMedico = medico.IdMedico;
+
             return ctx.Consulta
                 .Where(m => m.IdMedico == idMedico)
+                .Select(m => new Consultum()
+                {
+                    DataConsulta = m.DataConsulta,
+                    IdConsulta = m.IdConsulta,
+                    IdMedicoNavigation = new Medico()
+                    {
+                        IdUsuarioNavigation = new Usuario()
+                        {
+                            NomeUsuario = m.IdMedicoNavigation.IdUsuarioNavigation.NomeUsuario
+                        }
+                    },
+                    IdPacienteNavigation = new Paciente()
+                    {
+                        IdUsuarioNavigation = new Usuario()
+                        {
+                            NomeUsuario = m.IdPacienteNavigation.IdUsuarioNavigation.NomeUsuario
+                        }
+                    },
+                    Descricao = m.Descricao,
+                    Situacao = m.Situacao
+
+                })
                 .ToList();
         }
 
-        public List<Consultum> LerTodasDoPaciente(int idPaciente)
+        public List<Consultum> LerTodasDoPaciente(int idUsuario)
         {
+            Paciente paciente = ctx.Pacientes.FirstOrDefault(p => p.IdUsuario == idUsuario);
+            short idPaciente = paciente.IdPaciente;
+
             return ctx.Consulta
-                .Where(c => c.IdPaciente == idPaciente)
+                .Where(p => p.IdPaciente == idPaciente)
+                .Select(p => new Consultum()
+                {
+                    DataConsulta = p.DataConsulta,
+                    IdConsulta = p.IdConsulta,
+                    IdMedicoNavigation = new Medico()
+                    {
+                        IdUsuarioNavigation = new Usuario()
+                        {
+                            NomeUsuario = p.IdMedicoNavigation.IdUsuarioNavigation.NomeUsuario
+                        }
+                    },
+                    IdPacienteNavigation = new Paciente()
+                    {
+                        IdUsuarioNavigation = new Usuario()
+                        {
+                            NomeUsuario = p.IdPacienteNavigation.IdUsuarioNavigation.NomeUsuario
+                        }
+                    },
+                    Descricao = p.Descricao,
+                    Situacao = p.Situacao
+
+                })
                 .ToList();
         }
 

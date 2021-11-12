@@ -278,6 +278,7 @@ header{
     flex-direction: column;
     background-color: white;
     width: 325px;
+    min-height: 469px;
     height: 100%;
     align-items: center;
     padding-left: 50px;
@@ -328,4 +329,11 @@ header{
 .separacao_consulta{
     width: 100%;
     margin-top: 30px;
+}
+
+.nenhuma_consulta{
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 50px;
 }

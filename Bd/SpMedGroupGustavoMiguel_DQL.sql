@@ -13,7 +13,7 @@ SELECT * FROM medico
 
 SELECT * FROM paciente 
 
-SELECT * FROM consulta
+SELECT * FROM consulta WHERE idPaciente = 2
 
 SELECT * FROM imagemCliente
 

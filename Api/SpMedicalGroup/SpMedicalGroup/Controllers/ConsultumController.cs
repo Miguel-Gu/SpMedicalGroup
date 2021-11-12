@@ -81,14 +81,14 @@ namespace SpMedicalGroup.Controllers
         }
 
         [Authorize(Roles = "2")]
-        [HttpPatch("todosMedico")]
+        [HttpGet("todosMedico")]
         public IActionResult LerTodasDoMedico()
         {
             try
             {
-                int idMedico = Convert.ToInt32(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
+                int idUsuario = Convert.ToInt32(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
 
-                return Ok(_consultumRepository.LerTodasDoMedico(idMedico));
+                return Ok(_consultumRepository.LerTodasDoMedico(idUsuario));
             }
             catch (Exception error)
             {
@@ -101,14 +101,16 @@ namespace SpMedicalGroup.Controllers
         }
 
         [Authorize(Roles = "1")]
-        [HttpPatch("todosPaciente")]
+        [HttpGet("todosPaciente")]
         public IActionResult LerTodasDoPaciente()
         {
             try
             {
-                int idPaciente = Convert.ToInt32(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
+                int idUsuario = Convert.ToInt32(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
 
-                return Ok(_consultumRepository.LerTodasDoPaciente(idPaciente));
+
+
+                return Ok(_consultumRepository.LerTodasDoPaciente(idUsuario));
             }
             catch (Exception error)
             {

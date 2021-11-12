@@ -13,7 +13,16 @@ namespace SpMedicalGroup.Repositories
         InLockContext ctx = new InLockContext();
         public List<Medico> ListarTodos()
         {
-            return ctx.Medicos.ToList();
+            return ctx.Medicos
+                .Select(m => new Medico()
+                {
+                    IdMedico = m.IdMedico,
+                    IdUsuarioNavigation = new Usuario()
+                    {
+                        NomeUsuario = m.IdUsuarioNavigation.NomeUsuario
+                    }
+                })
+                .ToList();
         }
     }
 }

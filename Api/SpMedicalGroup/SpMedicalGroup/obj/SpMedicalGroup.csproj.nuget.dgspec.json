@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\44032009821\\Desktop\\Nova pasta\\SpMedicalGroup\\Api\\SpMedicalGroup\\SpMedicalGroup\\SpMedicalGroup.csproj": {}
+    "C:\\Users\\44032009821\\Desktop\\SpMedicalGroup\\Api\\SpMedicalGroup\\SpMedicalGroup\\SpMedicalGroup.csproj": {}
   },
   "projects": {
-    "C:\\Users\\44032009821\\Desktop\\Nova pasta\\SpMedicalGroup\\Api\\SpMedicalGroup\\SpMedicalGroup\\SpMedicalGroup.csproj": {
+    "C:\\Users\\44032009821\\Desktop\\SpMedicalGroup\\Api\\SpMedicalGroup\\SpMedicalGroup\\SpMedicalGroup.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\44032009821\\Desktop\\Nova pasta\\SpMedicalGroup\\Api\\SpMedicalGroup\\SpMedicalGroup\\SpMedicalGroup.csproj",
+        "projectUniqueName": "C:\\Users\\44032009821\\Desktop\\SpMedicalGroup\\Api\\SpMedicalGroup\\SpMedicalGroup\\SpMedicalGroup.csproj",
         "projectName": "SpMedicalGroup",
-        "projectPath": "C:\\Users\\44032009821\\Desktop\\Nova pasta\\SpMedicalGroup\\Api\\SpMedicalGroup\\SpMedicalGroup\\SpMedicalGroup.csproj",
+        "projectPath": "C:\\Users\\44032009821\\Desktop\\SpMedicalGroup\\Api\\SpMedicalGroup\\SpMedicalGroup\\SpMedicalGroup.csproj",
         "packagesPath": "C:\\Users\\44032009821\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\44032009821\\Desktop\\Nova pasta\\SpMedicalGroup\\Api\\SpMedicalGroup\\SpMedicalGroup\\obj\\",
+        "outputPath": "C:\\Users\\44032009821\\Desktop\\SpMedicalGroup\\Api\\SpMedicalGroup\\SpMedicalGroup\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\44032009821\\AppData\\Roaming\\NuGet\\NuGet.Config",

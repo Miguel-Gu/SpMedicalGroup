@@ -3,26 +3,26 @@ import axios from 'axios';
 import { render } from '@testing-library/react';
 import Cabecalho from '../../components/cabecalho/cabecalho';
 
-export default function TodasConsultas() {
+export default function ConsultasMedicos() {
     const [listaConsultas, setListaConsultas] = useState([]);
 
-    function buscarTodasConsultas() {
-        axios('http://localhost:5000/api/Consultum/ListarTodos', {
+    function buscarConsultasMedicos() {
+        axios('http://localhost:5000/api/Consultum/todosMedico', {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login')
             }
         })
             .then(response => {
-                
-                console.log(response.data)
+                console.log(response)
                 if (response.status === 200) {
                     setListaConsultas(response.data);
+
                 }
             })
             .catch(erro => console.log(erro))
     }
 
-    useEffect(buscarTodasConsultas, []);
+    useEffect(buscarConsultasMedicos, []);
 
 
     render()
@@ -35,10 +35,11 @@ export default function TodasConsultas() {
 
                     {
                         listaConsultas.map((consulta) => {
+
+
                             return(
                                 <table key={consulta.idConsulta} className="consulta">
                                     <div className="horizontal">
-                                        <h2 className="id_consulta">{consulta.idConsulta}</h2>
                                         <div className="dados_consulta">
                                             <tr>
                                                 <td>Médico: </td>

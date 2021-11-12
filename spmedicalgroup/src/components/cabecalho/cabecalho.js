@@ -6,10 +6,10 @@ import logo from'../../assets/logo_spmedgroup_v2.png'
       return(
             <header>
                 <div className="container_header">
-                    <img src={logo} class="logo"/>
-                    <a href="">Cadastrar</a>
-                    <a href="">Listar</a>
-                    <a href="">Descrição</a>
+                    <img src={logo} className="logo" alt="logo"/>
+                    <a>Cadastrar</a>
+                    <a>Listar</a>
+                    <a>Descrição</a>
                     <p>Administrador</p>
                 </div>
             </header>
