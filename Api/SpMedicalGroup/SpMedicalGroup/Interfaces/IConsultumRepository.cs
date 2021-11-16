@@ -60,6 +60,6 @@ namespace SpMedicalGroup.Interfaces
         /// </summary>
         /// <param name="id">ID da consulta que terá a descrição alterada</param>
         /// <param name="descricao">Nova descrição da consulta</param>
-        void IncluirDescricao(byte id, byte idMedico,string descricao);
+        void IncluirDescricao(byte id, string descricao);
     }
 }

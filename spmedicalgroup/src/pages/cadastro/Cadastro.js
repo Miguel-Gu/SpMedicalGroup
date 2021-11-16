@@ -55,12 +55,13 @@ export default class Cadastro extends Component {
 
     cadastrarConsulta = (event) => {
         event.preventDefault();
+
         this.setState({ isLoading: true});
 
         let consulta = {
             idMedico: this.state.idMedico,
             idPaciente: this.state.idPaciente,
-            dataConsulta: new Date(this.state.idMedico),
+            dataConsulta: new Date(this.state.dataConsulta),
             descricao: 'Agendada',
             situacao: 'Agendada',
         };
@@ -86,7 +87,10 @@ export default class Cadastro extends Component {
     };
 
     atualizaStateCampo = (campo) => {
+        console.log(campo.target.value)
+        console.log(campo.target.name)
         this.setState({ [campo.target.name]: campo.target.value });
+        
     }
 
     componentDidMount() {
@@ -102,29 +106,29 @@ export default class Cadastro extends Component {
                         <div class="main_cadastro">
                             <h1>Cadastrar consulta</h1>
 
-                            <form class="form_cadastro">
+                            <form class="form_cadastro" onSubmit={this.cadastrarConsulta}>
 
-                                <select id="medicos" >
+                                <select id="medicos" name="idMedico" onChange={this.atualizaStateCampo}>
                                     {this.state.listaMedicos.map((medico) => {
                                         return (
-                                            <option key={medico.idMedico} value={medico.idMedico}>
+                                            <option key={medico.idMedico} value={medico.idMedico} name="idMedico">
                                                 {medico.idUsuarioNavigation.nomeUsuario}
                                             </option>
                                         );
                                     })}
                                 </select>
 
-                                <select id="paciente">
+                                <select id="paciente" name="idPaciente" onChange={this.atualizaStateCampo}>
                                     {this.state.listaPacientes.map((paciente) => {
                                         return (
-                                            <option key={paciente.idPaciente} value={paciente.idPaciente}>
+                                            <option key={paciente.idPaciente} value={paciente.idPaciente} name="idPaciente">
                                                 {paciente.idUsuarioNavigation.nomeUsuario}
                                             </option>
                                         );
                                     })}
                                 </select>
 
-                                <input type="date" placeholder="Data" value={this.dataConsulta} onChange={this.atualizaStateCampo}/>
+                                <input type="datetime-local" name="dataConsulta" placeholder="Data" value={this.dataConsulta} onChange={this.atualizaStateCampo}/>
                                 <button type="submit" class="botao_cadastro">Cadastrar</button>
                             </form>
                         </div>

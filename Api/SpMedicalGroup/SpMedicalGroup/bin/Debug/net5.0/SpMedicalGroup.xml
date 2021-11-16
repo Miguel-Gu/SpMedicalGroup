@@ -43,7 +43,7 @@
             </summary>
             <param name="id">ID da consulta que será cancelada</param>
         </member>
-        <member name="M:SpMedicalGroup.Interfaces.IConsultumRepository.IncluirDescricao(System.Byte,System.Byte,System.String)">
+        <member name="M:SpMedicalGroup.Interfaces.IConsultumRepository.IncluirDescricao(System.Byte,System.String)">
             <summary>
             Inclui descrição em uma consulta
             </summary>

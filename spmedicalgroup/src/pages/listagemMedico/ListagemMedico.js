@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { render } from '@testing-library/react';
 import Cabecalho from '../../components/cabecalho/cabecalho';
 
 export default function ConsultasMedicos() {
     const [listaConsultas, setListaConsultas] = useState([]);
+    const [descricao, setDescricao] = useState('');
+    const [idConsulta, setidConsulta] = useState(0);
 
     function buscarConsultasMedicos() {
         axios('http://localhost:5000/api/Consultum/todosMedico', {
@@ -24,8 +25,22 @@ export default function ConsultasMedicos() {
 
     useEffect(buscarConsultasMedicos, []);
 
+    function alterarDescricao(evento){
+        evento.preventDefault();
 
-    render()
+        axios.post('http://localhost:5000/api/Consultum/incluir/' + idConsulta + '/' + descricao, {},{
+            headers: {
+                Authorization: 'Bearer ' + localStorage.getItem('usuario-login'),
+            },})
+            .then((resposta) => {
+                console.log(resposta)
+                buscarConsultasMedicos()
+            })
+            .catch((erro) => {
+                console.log(erro)
+            })
+    }
+
     return (
         <div>
             <Cabecalho />
@@ -35,7 +50,6 @@ export default function ConsultasMedicos() {
 
                     {
                         listaConsultas.map((consulta) => {
-
 
                             return(
                                 <table key={consulta.idConsulta} className="consulta">
@@ -74,6 +88,26 @@ export default function ConsultasMedicos() {
                             )
                         })
                     }
+
+                    <form onSubmit={alterarDescricao}>
+                        <select onClick={ (campo) => setidConsulta(campo.target.value)}>
+                            {
+                                listaConsultas.map((consulta) => {
+                                    return(
+                                        <option value={consulta.idConsulta} name="idConsulta" >
+                                            Médico: {consulta.idMedicoNavigation.idUsuarioNavigation.nomeUsuario}   
+                                            Paciente: {consulta.idPacienteNavigation.idUsuarioNavigation.nomeUsuario}   
+                                            Data: { Intl.DateTimeFormat("pt-BR", { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true}).format(new Date(consulta.dataConsulta)) } 
+                                        </option>
+                                    )
+                                })
+                            }
+                        </select>
+                        <input type="text" value={descricao} onChange={ (campo) => setDescricao(campo.target.value)} placeholder="incluir descrição"></input>
+                        <button type="submit">alterar descrição</button>
+                    </form>
+
+
                 </div>
             </main>
         </div>

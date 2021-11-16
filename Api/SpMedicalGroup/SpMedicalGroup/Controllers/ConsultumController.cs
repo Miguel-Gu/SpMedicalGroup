@@ -38,6 +38,7 @@ namespace SpMedicalGroup.Controllers
         [HttpPost("cadastrar")]
         public IActionResult Cadastrar(Consultum novaConsulta)
         {
+            
             _consultumRepository.Cadastrar(novaConsulta);
 
             return StatusCode(201);
@@ -63,10 +64,10 @@ namespace SpMedicalGroup.Controllers
         [HttpPost("incluir/{id}/{descricao}")]
         public IActionResult IncluirDescricao(byte id, string descricao)
         {
-            byte idMedico = Convert.ToByte(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
-            _consultumRepository.IncluirDescricao(id, idMedico, descricao);
+
             try
             {
+                _consultumRepository.IncluirDescricao(id, descricao);
                 return StatusCode(204);
             }
             catch (Exception error)

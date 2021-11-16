@@ -7,14 +7,11 @@ import './estilo.css';
 
 import Login from './pages/login/Login';
 import Cadastro from './pages/cadastro/Cadastro';
-//import Descricao from './pages/descricao/Descricao';
 import Listagem from './pages/listagem/Listagem';
 import ListagemMedico from './pages/listagemMedico/ListagemMedico';
 import ListagemPaciente from './pages/listagemPaciente/ListagemPaciente';
 //import NotFound from './pages/notFound/NotFound';
 
-
-//<Route path="/descricao" component={Descricao}/>
 //<Route path="/notfound" component={NotFound}/>
 //<Redirect to="/notfound"/>
 

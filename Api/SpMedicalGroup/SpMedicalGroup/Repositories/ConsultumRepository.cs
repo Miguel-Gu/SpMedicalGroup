@@ -1,6 +1,7 @@
 ﻿using SpMedicalGroup.Contexts;
 using SpMedicalGroup.Domains;
 using SpMedicalGroup.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -28,8 +29,7 @@ namespace SpMedicalGroup.Repositories
 
         public void Cadastrar(Consultum novaConsulta)
         {
-            ctx.Consulta.Add(novaConsulta);
-
+            ctx.Consulta.Add(novaConsulta);          
             ctx.SaveChanges();
         }
 
@@ -57,20 +57,18 @@ namespace SpMedicalGroup.Repositories
             ctx.SaveChanges();
         }
 
-        public void IncluirDescricao(byte id, byte idMedico, string descricao)
+        public void IncluirDescricao(byte id, string descricao)
         {
             Consultum consultaBuscada = BuscarPorId(id);
 
-            if (consultaBuscada.IdMedico == idMedico)
-            {
-                if (descricao != null)
+            if (descricao != null)
                 {
                     consultaBuscada.Descricao = descricao;
 
                     ctx.Consulta.Update(consultaBuscada);
                     ctx.SaveChanges();
                 }
-            }
+            
         }
 
         public List<Consultum> LerTodasDoMedico(int idUsuario)
