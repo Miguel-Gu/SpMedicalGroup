@@ -305,3 +305,18 @@ header{
     font-weight: 500;
     font-size: 50px;
 }
+
+@media(max-width: 460px){
+
+    .main_cadastro{
+        width: 250px;
+    }
+
+    .main_listagem{
+        width: 250px;
+    }
+
+    .main_login{
+        width: 250px;
+    }
+}

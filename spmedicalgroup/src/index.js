@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Switch, Redirect } from 'react-router-dom';
 //import { Redirect, Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 //import { parseJwt, usuarioAutenticado } from './services/auth';
 import './estilo.css';
@@ -26,6 +26,7 @@ const routing = (
         <Route path="/listagemMedico" component={ListagemMedico}/>
         <Route path="/listagemPaciente" component={ListagemPaciente}/>
         <Route path="/cadastro" component={Cadastro}/>
+        <Route path="/"><Redirect to="/login"/></Route>
       </Switch>
     </div>
   </Router>

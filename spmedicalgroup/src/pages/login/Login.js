@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import axios from 'axios';
-//import { parseJwt } from '../../services/auth';
+import { parseJwt } from '../../services/auth';
 
 import logo from'../../assets/logo_spmedgroup_v2.png'
 
@@ -8,7 +8,7 @@ export default class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            email: 'ricardo.lemos@spmedicalgroup.com.br',
+            email: 'ligia@gmail.com',
             senha: '###',
             erroMensagem: '',
             isLoading: false,
@@ -39,15 +39,15 @@ export default class Login extends Component {
 
                     //console.log(this.props);
 
-                    //if (parseJwt().role === '3') {
-                    //    this.props.history.push('/listagem');
-                    //}
-                    //if (parseJwt().role === '2') {
-                    //    this.props.history.push('/listagemMedico');
-                    //}
-                    //if (parseJwt().role === '1') {
-                    //    this.props.history.push('/listagemPaciente');
-                    //}
+                    if (parseJwt().role === '3') {
+                       this.props.history.push('/listagem');
+                    }
+                    if (parseJwt().role === '2') {
+                       this.props.history.push('/listagemMedico');
+                    }
+                    if (parseJwt().role === '1') {
+                       this.props.history.push('/listagemPaciente');
+                    }
                 }
             })
 
