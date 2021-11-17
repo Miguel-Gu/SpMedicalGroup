@@ -183,43 +183,11 @@ header{
 
 /* Tela de Descrição */
 
-
-.tela_descricao{
-    height: 673px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#25a3e8+0,253de8+100 */
-    background: rgb(37,163,232); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(37,163,232,1) 0%, rgba(37,61,232,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgba(37,163,232,1) 0%,rgba(37,61,232,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(37,163,232,1) 0%,rgba(37,61,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25a3e8', endColorstr='#253de8',GradientType=0 ); /* IE6-9 */
-}
-
-.main_descricao{
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    width: 325px;
-    height: 400px;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px;
-}
-
-.main_descricao h1{
-    font-family: 'Titillium Web', sans-serif;
-    font-weight: normal;
-    font-size: 30px;
-    text-decoration: none;
-    color: black
-}
-
 .form_descricao{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-top: 50px;
     height: 300px;
     width: 300px;
 }

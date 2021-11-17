@@ -89,15 +89,16 @@ export default function ConsultasMedicos() {
                         })
                     }
 
-                    <form onSubmit={alterarDescricao}>
+                    <form onSubmit={alterarDescricao} className="form_descricao">
                         <select onClick={ (campo) => setidConsulta(campo.target.value)}>
+                            <option default disabled selected>Selecione uma consulta </option>
                             {
                                 listaConsultas.map((consulta) => {
                                     return(
                                         <option value={consulta.idConsulta} name="idConsulta" >
-                                            Médico: {consulta.idMedicoNavigation.idUsuarioNavigation.nomeUsuario}   
-                                            Paciente: {consulta.idPacienteNavigation.idUsuarioNavigation.nomeUsuario}   
-                                            Data: { Intl.DateTimeFormat("pt-BR", { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true}).format(new Date(consulta.dataConsulta)) } 
+                                            Médico:{consulta.idMedicoNavigation.idUsuarioNavigation.nomeUsuario}_    
+                                            Paciente:{consulta.idPacienteNavigation.idUsuarioNavigation.nomeUsuario}_   
+                                            Data:{ Intl.DateTimeFormat("pt-BR", { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true}).format(new Date(consulta.dataConsulta)) } 
                                         </option>
                                     )
                                 })
