@@ -68,9 +68,7 @@ export default class Cadastro extends Component {
 
         axios
             .post('http://localhost:5000/api/Consultum/cadastrar', consulta, {
-                headers: {
-                    Authorization: 'Bearer ' + localStorage.getItem('usuario-login'),
-                },
+                 
             })
             .then((resposta) => {
                 console.log(resposta)
