@@ -15,8 +15,8 @@ export default class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            email: 'ricardo.lemos@spmedicalgroup.com.br',
-            senha: '###',
+            email: '',
+            senha: '',
         };
     }
 
@@ -37,7 +37,7 @@ export default class Login extends Component {
 
                 console.warn(jwtDecode(token).role);
                 console.warn('Paciente');
-                //this.props.navigation.navigate('consultapaciente');
+                this.props.navigation.navigate('ConsultaPaciente');
 
             }
             else if (jwtDecode(token).role == 2) {
