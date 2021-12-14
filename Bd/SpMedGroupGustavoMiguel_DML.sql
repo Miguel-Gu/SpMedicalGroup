@@ -2,7 +2,8 @@ USE SP_MG_GUSTAVO_MIGUEL;
 GO
 
 INSERT INTO empresa (CNPJ, nomeFantasia, endereco)
-VALUES ('86.400.902/0001-30', 'SP Medical Group', 'Av. Barão Limeira, 532, São Paulo, SP');
+VALUES ('86.400.902/0001-30', 'SP Medical Group', 'Av. Barão Limeira, 532, São Paulo, SP'),
+	   ('98.224.098/5989-74', 'Isaac Newton', 'R. São Carlos do Pinhal, 139 - Bela Vista, São Paulo - SP');
 GO
 
 INSERT INTO tipoUsuario (nomeTipoUsuario)
@@ -24,11 +25,17 @@ VALUES ('2', 'Ricardo Lemos', 'ricardo.lemos@spmedicalgroup.com.br', '###'),
 	   ('1', 'João', 'joao@hotmail.com', '###'),
 	   ('1', 'Bruno', 'bruno@gmail.com', '###'),
 	   ('1', 'Mariana', 'mariana@outlook.com', '###'),
-	   ('3', 'Administrador', 'administrador@admin.com', '###');
+	   ('3', 'Administrador', 'administrador@admin.com', '###'),
+	   ('2', 'Gustavo Miguel', 'gustavo.miguel@isaacnewton.com.br', '###'),
+	   ('2', 'Susana Araujo', 'helena.araujo@isaacnewton.com.br', '###'),
+	   ('2', 'Helena Araujo', 'susana.araujo@isaacnewton.com.br', '###');
 GO
 
 INSERT INTO medico (idTipoMedico, idUsuario, CRM, idEmpresa)
-VALUES ('3', '1', '54356-SP', '1'), ('17', '2', '53452-SP', '1'), ('16', '3', '65463-SP', '1');
+VALUES ('3', '1', '54356-SP', '1'), ('17', '2', '53452-SP', '1'), ('16', '3', '65463-SP', '1'),
+       ('10', '12', '98974-SP', '2'),
+	   ('15', '13', '98224-SP', '2'),
+	   ('16', '14', '99654-SP', '2');
 GO
 
 INSERT INTO paciente (RG, CPF, endereco, dataNascimento, telefone, idUsuario)
@@ -48,5 +55,8 @@ VALUES ('3', '7', '20/01/2020  15:00:00', 'Realizada', 'Realizada'),
 	   ('2', '2', '06/02/2018  10:00:00', 'Realizada', 'Realizada'), 
 	   ('1', '4', '07/02/2019  11:00:45', 'Cancelada', 'Cancelada'), 
 	   ('3', '7', '08/03/2020  15:00:00', 'Agendada', 'Agendada'), 
-	   ('1', '4', '09/03/2020  11:00:45', 'Agendada', 'Agendada');
+	   ('1', '4', '09/03/2020  11:00:45', 'Agendada', 'Agendada'),
+	   ('4', '1', '20/01/2022  12:00:00', 'Agendada', 'Agendada'),
+	   ('5', '5', '14/01/2022  18:00:00', 'Agendada', 'Agendada'),
+	   ('6', '6', '12/01/2022  09:00:00', 'Agendada', 'Agendada');
 GO

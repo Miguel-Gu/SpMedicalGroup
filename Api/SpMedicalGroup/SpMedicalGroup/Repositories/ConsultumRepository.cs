@@ -87,7 +87,14 @@ namespace SpMedicalGroup.Repositories
                         IdUsuarioNavigation = new Usuario()
                         {
                             NomeUsuario = m.IdMedicoNavigation.IdUsuarioNavigation.NomeUsuario
+                        },
+
+                        IdEmpresaNavigation = new Empresa()
+                        {
+                            Endereco = m.IdMedicoNavigation.IdEmpresaNavigation.Endereco
                         }
+
+
                     },
                     IdPacienteNavigation = new Paciente()
                     {
@@ -119,7 +126,14 @@ namespace SpMedicalGroup.Repositories
                         IdUsuarioNavigation = new Usuario()
                         {
                             NomeUsuario = p.IdMedicoNavigation.IdUsuarioNavigation.NomeUsuario
+                        },
+
+                        IdEmpresaNavigation = new Empresa()
+                        {
+                            Endereco = p.IdMedicoNavigation.IdEmpresaNavigation.Endereco
                         }
+
+
                     },
                     IdPacienteNavigation = new Paciente()
                     {
@@ -147,6 +161,11 @@ namespace SpMedicalGroup.Repositories
                         IdUsuarioNavigation= new Usuario()
                         {
                             NomeUsuario = p.IdMedicoNavigation.IdUsuarioNavigation.NomeUsuario
+                        },
+
+                        IdEmpresaNavigation = new Empresa()
+                        {
+                            Endereco = p.IdMedicoNavigation.IdEmpresaNavigation.Endereco
                         }
                     },
                     IdPacienteNavigation = new Paciente()
