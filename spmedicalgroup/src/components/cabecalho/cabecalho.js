@@ -12,6 +12,7 @@ import {Link} from 'react-router-dom';
                     <img src={logo} className="logo" alt="logo"/>
                     <Link to="/cadastro">Cadastrar</Link>
                     <Link to="/listagem">Listar</Link>
+                    <Link to="file:///C:/Users/44032009821/Desktop/SpMedicalGroup/spmedicalgroup/src/pages/mapa/mapa.html">Endereços dos Clientes</Link>
                 </div>
             </header>
         )

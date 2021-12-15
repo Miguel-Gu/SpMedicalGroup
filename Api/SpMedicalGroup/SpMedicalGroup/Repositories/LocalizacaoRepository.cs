@@ -15,8 +15,8 @@ namespace SpMedicalGroup.Repositories
         public LocalizacaoRepository()
         {
             var client = new MongoClient("mongodb://localhost:27017");
-            var database = client.GetDatabase("enderecos");
-            _localizacoes = database.GetCollection<Localizacao>("localizações");
+            var database = client.GetDatabase("mapa");
+            _localizacoes = database.GetCollection<Localizacao>("localizacoes");
         }
 
         public void Cadastrar(Localizacao novaLocalizacao)
