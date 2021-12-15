@@ -13,7 +13,7 @@ import mapa from '../../pages/mapa/mapa.html';
                     <img src={logo} className="logo" alt="logo"/>
                     <Link to="/cadastro">Cadastrar</Link>
                     <Link to="/listagem">Listar</Link>
-                    <Link to={mapa}>Endereços dos Clientes</Link>
+                    <Link to="/mapa">Endereços dos Clientes</Link>
                 </div>
             </header>
         )

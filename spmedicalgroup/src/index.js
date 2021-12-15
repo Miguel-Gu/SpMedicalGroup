@@ -10,6 +10,7 @@ import Cadastro from './pages/cadastro/Cadastro';
 import Listagem from './pages/listagem/Listagem';
 import ListagemMedico from './pages/listagemMedico/ListagemMedico';
 import ListagemPaciente from './pages/listagemPaciente/ListagemPaciente';
+import Mapa from './pages/mapa/mapa'
 //import NotFound from './pages/notFound/NotFound';
 
 //<Route path="/notfound" component={NotFound}/>
@@ -26,6 +27,7 @@ const routing = (
         <Route path="/listagemMedico" component={ListagemMedico}/>
         <Route path="/listagemPaciente" component={ListagemPaciente}/>
         <Route path="/cadastro" component={Cadastro}/>
+        <Route path="/mapa" component={Mapa}/>
         <Route path="/"><Redirect to="/login"/></Route>
       </Switch>
     </div>
