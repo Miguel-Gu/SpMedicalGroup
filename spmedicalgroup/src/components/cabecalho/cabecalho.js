@@ -2,6 +2,7 @@ import React from 'react'
 import logo from'../../assets/logo_spmedgroup_v2.png'
 import { parseJwt } from '../../services/auth';
 import {Link} from 'react-router-dom';
+import mapa from '../../pages/mapa/mapa.html';
 
  export default function Cabecalho(){
 
@@ -12,7 +13,7 @@ import {Link} from 'react-router-dom';
                     <img src={logo} className="logo" alt="logo"/>
                     <Link to="/cadastro">Cadastrar</Link>
                     <Link to="/listagem">Listar</Link>
-                    <Link to="file:///C:/Users/44032009821/Desktop/SpMedicalGroup/spmedicalgroup/src/pages/mapa/mapa.html">Endereços dos Clientes</Link>
+                    <Link to={mapa}>Endereços dos Clientes</Link>
                 </div>
             </header>
         )
