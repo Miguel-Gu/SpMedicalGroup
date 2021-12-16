@@ -2,7 +2,6 @@ import React from 'react'
 import logo from'../../assets/logo_spmedgroup_v2.png'
 import { parseJwt } from '../../services/auth';
 import {Link} from 'react-router-dom';
-import mapa from '../../pages/mapa/mapa.html';
 
  export default function Cabecalho(){
 
